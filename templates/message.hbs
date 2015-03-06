@@ -1,11 +1,33 @@
-<h2>
-  {{this.recipient}}
+<h3>
+    Failed Delivery Notice: &gt;&gt;{{this.title}}
   <small>
     <br>
-    {{this.title}}
+    Recipient: {{this.recipient}}
   </small>
-</h2>
+</h3>
 <hr>
+
 <p>
-{{this.body}}
+  Sorry, we were unable to deliver your message to the following address.
+</p>
+
+<p>
+  &lt;{{this.recipient}}&gt;:
+</p>
+<p>
+  Remote host said: 550 This message was classified as SPAM and may not be delivered
+</p>
+
+<p>
+  --- Below this line is a copy of the message.
+</p>
+<p>
+  ------=_Part_4237144_1099482924.14256743884157
+  Content-Type: text/plain; charset=UTF-8
+  Content-Transfer-Encoding: quoted-printable
+</p>
+
+<p>
+  {{this.body}}=C2=A0
+  =C2=A0
 </p>

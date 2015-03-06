@@ -19,10 +19,8 @@ ElectronicMail.MessageController = Ember.ObjectController.extend({
       this.transitionToRoute('messages');
     },
 
-    // delete: function(box) {
-    //   if (confirm('Are you sure?')) {
-    //     box.destroyRecord();
-    //   };
-    // }
+    delete: function(message) {
+      box.destroyRecord();
+    }
   }
 });

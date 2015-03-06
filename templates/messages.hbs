@@ -1,14 +1,23 @@
 <h2>
-  Your Messages
+  Your Inbox
   <small>
     <br>
-    Who do you want to block today?
+    Thankyou for using Electronic-Mail!
   </small>
 </h2>
 <hr>
 
-<ul class="list-title list-unstyled">
+
   {{#each}}
-    <li class="li-name">{{recipient}} | {{#link-to 'message' this.id}}{{title}}{{/link-to}}</li>
+    <div class="col-md-12 row">
+
+      <div class="col-md-3 mail-item">
+        <a href="#" {{action 'delete' this}}>x</a> | MAILER-DAEMON@AOL.COM
+      </div>
+
+      <div class="col-md-8 mail-item">
+        {{#link-to 'message' this.id}}Failed Delivery Notice: &gt;&gt;{{title}}{{/link-to}}
+      </div>
+
+    </div>
   {{/each}}
-</ul>
