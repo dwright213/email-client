@@ -16,16 +16,22 @@
   <script src="store.js"></script>
   <script src="router.js"></script>
 
-  <script src="controllers/about.js"></script>
 
   <script src="routes/message.js"></script>
+  <script src="models/message.js"></script>
+  <script src="controllers/message.js"></script>
+
+  <script src="routes/new-message.js"></script>
+  <script src="controllers/new-message.js"></script>
+
+  <script src="routes/messages.js"></script>
+
   <script src="routes/about.js"></script>
 
-  <script src="models/message.js"></script>
 
   <script>
     EmberHandlebarsLoader.loadTemplates([
-      'application', 'about', 'messages'
+      'application', 'about', 'messages', 'new-message'
     ]);
   </script>
 </head>

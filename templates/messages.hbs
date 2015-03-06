@@ -6,6 +6,9 @@
   </small>
 </h2>
 <hr>
-<p>
-Some stuff totally gonna go here, just watch.
-</p>
+
+<ul class="list-title list-unstyled">
+  {{#each}}
+    <li class="li-name">{{recipient}} | {{title}}</li>
+  {{/each}}
+</ul>
