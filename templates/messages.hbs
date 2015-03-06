@@ -9,6 +9,6 @@
 
 <ul class="list-title list-unstyled">
   {{#each}}
-    <li class="li-name">{{recipient}} | {{title}}</li>
+    <li class="li-name">{{recipient}} | {{#link-to 'message' this.id}}{{title}}{{/link-to}}</li>
   {{/each}}
 </ul>

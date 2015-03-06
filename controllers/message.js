@@ -1,4 +1,4 @@
-ElectronicMail.MessageController = Ember.ArrayController.extend({
+ElectronicMail.MessageController = Ember.ObjectController.extend({
   // sortProperties: ['name'],
   actions: {
   //   sortByDesc: function(){
