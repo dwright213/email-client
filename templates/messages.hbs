@@ -2,22 +2,31 @@
   Your Inbox
   <small>
     <br>
-    Thankyou for using Electronic-Mail!
+    Thank you for using Electronic-Mail!
   </small>
 </h2>
-<hr>
 
 
-  {{#each}}
-    <div class="col-md-12 row">
+<div class="messages-body">
+  <table class="table table-striped">
+    <tbody>
+      {{#each}}
+        <tr>
 
-      <div class="col-md-3 mail-item">
-        <a href="#" {{action 'delete' this}}>x</a> | MAILER-DAEMON@AOL.COM
-      </div>
+          <div class="col-md-3 mail-item">
+            <a class="btn btn-default btn-xs" href="#" {{action 'delete' this}}>&#10060;</a> MAILER-DAEMON@AOL.COM
+          </div>
 
-      <div class="col-md-8 mail-item">
-        {{#link-to 'message' this.id}}Failed Delivery Notice: &gt;&gt;{{title}}{{/link-to}}
-      </div>
+          <div class="col-md-7 mail-item">
+            {{#link-to 'message' this.id}}Failed Delivery Notice: &gt;&gt;{{title}}{{/link-to}}
+          </div>
 
-    </div>
-  {{/each}}
+          <div class="col-md-1 mail-item">
+            {{date}}
+          </div>
+
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

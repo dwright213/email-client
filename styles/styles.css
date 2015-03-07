@@ -1,3 +1,22 @@
-.mail-item {
+.messages-body {
+  border: 1px solid hsla(271, 100%, 64%, 1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0px;
   padding: 0px;
+  background: #FFFFFF;
+}
+
+.mail-item {
+  padding-left: .5em;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.table-striped {
+  margin-bottom: 0;
+}
+
+tr:nth-child(odd) {
+  background: hsla(271, 100%, 91%, 1);
 }

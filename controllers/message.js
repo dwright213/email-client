@@ -1,19 +1,12 @@
 ElectronicMail.MessageController = Ember.ObjectController.extend({
-  // sortProperties: ['name'],
+  sortProperties: ['date'],
   actions: {
-  //   sortByDesc: function(){
-  //     this.set('sortProperties', ['description']);
-  //   },
-  //
-  //   sortByName: function(){
-  //     this.set('sortProperties', ['name']);
-  //   },
-
     save: function() {
       var newMessage = this.store.createRecord('message', {
         recipient: this.get('recipient'),
         title: this.get('title'),
-        body: this.get('body')
+        body: this.get('body'),
+        date: this.get('sentDate')
       });
       newMessage.save();
       this.transitionToRoute('messages');

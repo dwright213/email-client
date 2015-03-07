@@ -1,13 +1,6 @@
 ElectronicMail.MessagesController = Ember.ArrayController.extend({
-  // sortProperties: ['name'],
+  sortProperties: ['date'],
   actions: {
-  //   sortByDesc: function(){
-  //     this.set('sortProperties', ['description']);
-  //   },
-  //
-  //   sortByName: function(){
-  //     this.set('sortProperties', ['name']);
-  //   },
 
     delete: function(message) {
       message.destroyRecord();

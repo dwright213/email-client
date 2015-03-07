@@ -9,7 +9,7 @@
 <form>
   <div class="form-group">
     <label for="Recipient">Recipient Address</label>
-    {{input id="recipient" class="form-control" value=recipient}}
+    {{input id="recipient" type="email" class="form-control" value=recipient required="true"}}
   </div>
 
   <div class="form-group">
@@ -19,9 +19,9 @@
 
   <div class="form-group">
     <label for="body" class="form-label">Body</label>
-    {{textarea id="body" type="text" class="form-control" value=body}}
+    {{textarea id="body" rows="8" type="text" class="form-control" value=body required="true"}}
   </div>
 
-  <button class="btn btn-primary" {{action 'save'}}>Save</button>  
+  <button class="btn btn-primary" {{action 'save'}}>Save</button>
 
 </form>
